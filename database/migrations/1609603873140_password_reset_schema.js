@@ -8,7 +8,7 @@ class PasswordResetSchema extends Schema {
     this.create('password_resets', table => {
       table.increments()
       table.string('email', 254).notNullable()
-      table.string('token').notNullabled().unique()
+      table.string('token').notNullable().unique()
 
       table.dateTime('expires_at')
       table.timestamps()
